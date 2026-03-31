@@ -1,0 +1,5 @@
+﻿{"timestamp":"2026-03-31T01:21:02.8679512+03:00","level":"INFO","message":"Scan started.","context":{"Delta":false,"Mode":"Quick"}}
+{"timestamp":"2026-03-31T01:21:04.3780225+03:00","level":"INFO","message":"Audit phase complete.","context":{"findings":10}}
+{"timestamp":"2026-03-31T01:21:05.7727820+03:00","level":"INFO","message":"Hunter phase complete.","context":{"findings":3}}
+{"timestamp":"2026-03-31T01:21:05.8129610+03:00","level":"INFO","message":"Reports exported.","context":{"csv":"C:\\Users\\moath\\OneDrive\\Desktop\\Smart System Auditor (SSA)\\WinGuard-PS\\Reports\\Audit_20260331_012102.csv","html":"C:\\Users\\moath\\OneDrive\\Desktop\\Smart System Auditor (SSA)\\WinGuard-PS\\Reports\\Audit_20260331_012102.html","json":"C:\\Users\\moath\\OneDrive\\Desktop\\Smart System Auditor (SSA)\\WinGuard-PS\\Reports\\Audit_20260331_012102.json"}}
+{"timestamp":"2026-03-31T01:21:05.8375109+03:00","level":"INFO","message":"Baseline updated.","context":{"path":"C:\\Users\\moath\\OneDrive\\Desktop\\Smart System Auditor (SSA)\\WinGuard-PS\\Data\\baseline.json"}}

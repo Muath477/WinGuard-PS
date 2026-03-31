@@ -1,0 +1,18 @@
+﻿"Severity","Category","CheckId","Title","Description","Remediation"
+"Pass","Audit","UAC-001","UAC Enabled","User Account Control is enabled.","No action required."
+"Pass","Audit","FW-Domain","Firewall Profile: Domain","Firewall profile is enabled.","No action required."
+"Pass","Audit","FW-Private","Firewall Profile: Private","Firewall profile is enabled.","No action required."
+"Pass","Audit","FW-Public","Firewall Profile: Public","Firewall profile is enabled.","No action required."
+"Pass","Audit","ADM-001","Local Administrators Review","Administrators group contains 2 account(s).","No action required."
+"Warning","Audit","NET-PORT-445","High-Risk Port Open: 445","Port 445 is listening on address(es): ::. Process(es): System (PID 4). Primary executable: . Signature: N/A. Merged 1 listener row(s) (e.g. IPv4/IPv6). At least one listener matched policy allowlist.","Restrict access with firewall rules or disable unnecessary service. Verify the owning process and binary signature."
+"Info","Audit","NET-PORT-135","High-Risk Port Open: 135","Port 135 is listening on address(es): ::, 0.0.0.0. Process(es): svchost (PID 1500). Primary executable: C:\WINDOWS\system32\svchost.exe. Signature: Valid. Merged 2 listener row(s) (e.g. IPv4/IPv6). At least one listener matched Windows system-binary downgrade rules.","Restrict access with firewall rules or disable unnecessary service. Verify the owning process and binary signature."
+"Critical","Audit","NET-PORT-139","High-Risk Port Open: 139","Port 139 is listening on address(es): 192.168.1.18. Process(es): System (PID 4). Primary executable: . Signature: N/A. Merged 1 listener row(s) (e.g. IPv4/IPv6).","Restrict access with firewall rules or disable unnecessary service. Verify the owning process and binary signature."
+"Pass","Audit","SRV-001","Auto-Start Services Path Review","No suspicious auto-start service paths detected. (Quick mode: analyzed first 120 auto-start service(s).)","No action required."
+"Pass","Hunter","HUNT-STARTUP-001","Startup File Hashing","No executable files found in startup folders.","No action required."
+"Critical","Hunter","HUNT-TASK-001","Suspicious Scheduled Tasks Found","3 scheduled task action(s) execute from user-writable paths.
+
+Details:
+- \BraveSoftwareUpdateTaskUserS-1-5-21-4235219758-1704497576-1465918199-1001Core{4A8A9D58-0C0B-4984-B576-4190C75A302E} | Run: ""C:\Users\moath\AppData\Local\BraveSoftware\Update\BraveUpdate.exe"" | Args: /c | RunAs: moath
+- \BraveSoftwareUpdateTaskUserS-1-5-21-4235219758-1704497576-1465918199-1001UA{2B58177E-B669-4A3E-B5AF-FBB40D37204E} | Run: ""C:\Users\moath\AppData\Local\BraveSoftware\Update\BraveUpdate.exe"" | Args: /ua /installsource scheduler | RunAs: moath
+- \ZoomUpdateTaskUser-S-1-5-21-4235219758-1704497576-1465918199-1001 | Run: ""C:\Users\moath\AppData\Roaming\Zoom\bin\Zoom.exe"" | Args: --action=UpdateSchedule | RunAs: moath","Disable unknown tasks and verify binary source/trust. Open Task Scheduler and review the task paths listed above."
+"Info","Hunter","HUNT-CONN-001","Active Network Connections Snapshot","Captured a snapshot of active TCP connections (limited to 50 rows).","Review unknown remote endpoints and investigate corresponding process IDs."

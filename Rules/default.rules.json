@@ -1,0 +1,55 @@
+{
+  "version": "1.0.0",
+  "rules": [
+    {
+      "id": "UAC-001",
+      "name": "UAC must be enabled",
+      "severityOnFail": "Critical"
+    },
+    {
+      "id": "FW-ANY",
+      "name": "Firewall profile should be enabled",
+      "severityOnFail": "Warning"
+    },
+    {
+      "id": "NET-HIGH-RISK-PORT",
+      "name": "High-risk ports should not be exposed",
+      "severityOnFail": "Critical"
+    },
+    {
+      "id": "DEF-001",
+      "name": "Microsoft Defender should be active with current signatures",
+      "severityOnFail": "Critical"
+    },
+    {
+      "id": "RDP-001",
+      "name": "Remote Desktop should require NLA when enabled",
+      "severityOnFail": "Warning"
+    },
+    {
+      "id": "SMB-001",
+      "name": "Legacy SMB1 should not be enabled",
+      "severityOnFail": "Warning"
+    },
+    {
+      "id": "BLK-001",
+      "name": "BitLocker should protect configured volumes",
+      "severityOnFail": "Warning"
+    },
+    {
+      "id": "WINRM-001",
+      "name": "WinRM exposure should be understood",
+      "severityOnFail": "Info"
+    },
+    {
+      "id": "HUNT-RUN-001",
+      "name": "Run keys should not point to suspicious paths",
+      "severityOnFail": "Warning"
+    },
+    {
+      "id": "HUNT-WMI-001",
+      "name": "WMI consumers should not use suspicious script paths",
+      "severityOnFail": "Warning"
+    }
+  ]
+}

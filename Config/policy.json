@@ -1,0 +1,55 @@
+{
+  "weights": {
+    "critical": 10,
+    "warning": 5,
+    "info": 1
+  },
+  "thresholds": {
+    "localAdminWarningCount": 3
+  },
+  "network": {
+    "highRiskPorts": [3389, 445, 135, 139, 5985],
+    "mergeListenersByPort": true,
+    "downgradeWhenWindowsSystemBinary": {
+      "enabled": true,
+      "ports": [135, 139],
+      "targetSeverity": "Info"
+    }
+  },
+  "allowlist": {
+    "executablePathPrefixes": [
+      "C:\\Windows\\System32\\",
+      "C:\\Windows\\SysWOW64\\",
+      "C:\\Program Files\\",
+      "C:\\Program Files (x86)\\"
+    ],
+    "taskPathContains": [
+      "\\Microsoft\\Windows\\"
+    ],
+    "portProcessAllow": [
+      { "port": 3389, "processName": "svchost" },
+      { "port": 445, "processName": "System" }
+    ]
+  },
+  "scanModes": {
+    "quick": {
+      "maxStartupFilesToHash": 8,
+      "maxConnectionsSnapshot": 50,
+      "maxAutoStartServices": 120
+    },
+    "deep": {
+      "maxStartupFilesToHash": 0,
+      "maxConnectionsSnapshot": 500,
+      "maxAutoStartServices": 0
+    }
+  },
+  "baseline": {
+    "path": "Data\\baseline.json"
+  },
+  "hunter": {
+    "suspiciousRemotePorts": [4444, 4443, 1337, 6666, 9999, 8443]
+  },
+  "bitLocker": {
+    "mountPoints": ["C:"]
+  }
+}

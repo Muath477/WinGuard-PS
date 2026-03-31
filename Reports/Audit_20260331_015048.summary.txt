@@ -1,0 +1,13 @@
+﻿WinGuard-PS v1.5.0 - Security summary
+Host: MUATH | User: moath | Time: 2026-03-31 01:50:55 | Mode: Deep
+Duration: 7.01 s
+Security score: 78%
+Counts - Critical: 3 | Warning: 2 | Pass: 12 | Info: 2
+
+Top priorities (up to 3):
+1) [Critical] Microsoft Defender Protection Disabled
+   Action: Enable real-time protection and ensure Defender (or managed AV) is active. In Group Policy: Computer Configuration > Administrative Templates > Windows Components > Microsoft Defender Antivirus.
+2) [Critical] High-Risk Port Open: 139
+   Action: Restrict access with firewall rules or disable unnecessary service. Verify the owning process and binary signature.
+3) [Critical] Suspicious Scheduled Tasks Found
+   Action: Disable unknown tasks and verify binary source/trust. Open Task Scheduler and review the task paths listed above.

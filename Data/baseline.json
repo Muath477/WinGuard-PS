@@ -1,0 +1,120 @@
+﻿{
+    "version":  1,
+    "updatedAt":  "2026-03-30T22:53:59.4830082Z",
+    "entries":  [
+                    {
+                        "fingerprint":  "b6dde099ddd225b3fbc44763f06b616613ff2f5a317a822cb86fee3768867f62",
+                        "checkId":  "UAC-001",
+                        "title":  "UAC Enabled",
+                        "severity":  "Pass"
+                    },
+                    {
+                        "fingerprint":  "db5217e1098374be0a2e431e66b3fb868ddfa72abd88082d5a7a33befab76f37",
+                        "checkId":  "FW-Domain",
+                        "title":  "Firewall Profile: Domain",
+                        "severity":  "Pass"
+                    },
+                    {
+                        "fingerprint":  "e05fa5248b45ebd24169cfb19db953c41f205af3de20855217f8619459b63402",
+                        "checkId":  "FW-Private",
+                        "title":  "Firewall Profile: Private",
+                        "severity":  "Pass"
+                    },
+                    {
+                        "fingerprint":  "a5a62f91882dea4c37ae5bbe6eeafc1fb5c782f73e3ec342bfb2d20cb4ec6441",
+                        "checkId":  "FW-Public",
+                        "title":  "Firewall Profile: Public",
+                        "severity":  "Pass"
+                    },
+                    {
+                        "fingerprint":  "50ec98ac0e74509b93e8b718d8a0441da65baa7b219d10691a42b8267da76511",
+                        "checkId":  "DEF-001",
+                        "title":  "Microsoft Defender Protection Disabled",
+                        "severity":  "Critical"
+                    },
+                    {
+                        "fingerprint":  "cea2baf272578674e0ef198f2ae3f1741900d3e253cacc4597eac7ea05375696",
+                        "checkId":  "RDP-001",
+                        "title":  "Remote Desktop Disabled",
+                        "severity":  "Pass"
+                    },
+                    {
+                        "fingerprint":  "2e3ffe1185a975e748f1acd14732525f5e249d448476889d210a850fb7296be1",
+                        "checkId":  "SMB-001",
+                        "title":  "SMB1 Protocol Not Enabled",
+                        "severity":  "Pass"
+                    },
+                    {
+                        "fingerprint":  "1e8d5ad68349da49fdb71032b22709e2b5cee63d4bc9dcb5c173d398f34bd84d",
+                        "checkId":  "BLK-001",
+                        "title":  "BitLocker Protection",
+                        "severity":  "Pass"
+                    },
+                    {
+                        "fingerprint":  "95b68a118414f822db1c87d357d7f7a349f8a2e8e1d22ad4206458c0311c4293",
+                        "checkId":  "WINRM-001",
+                        "title":  "WinRM Service Not Running",
+                        "severity":  "Pass"
+                    },
+                    {
+                        "fingerprint":  "375be70fa4cf3f95cc41cc4f1370f12a5d4543270e06c1c33053a7eee05396fc",
+                        "checkId":  "ADM-001",
+                        "title":  "Local Administrators Review",
+                        "severity":  "Pass"
+                    },
+                    {
+                        "fingerprint":  "30d724ac431e392005f7b935e10d9dc57300b158b03578b70165ea7162253da3",
+                        "checkId":  "NET-PORT-445",
+                        "title":  "High-Risk Port Open: 445",
+                        "severity":  "Warning"
+                    },
+                    {
+                        "fingerprint":  "853fd8f2466ee75012f9f0451e8f2541bbdecc7b0c1757eb67992fd3e0ab8d4b",
+                        "checkId":  "NET-PORT-135",
+                        "title":  "High-Risk Port Open: 135",
+                        "severity":  "Info"
+                    },
+                    {
+                        "fingerprint":  "faa126030016e6cd4d3863502119944b12733b698ac6f75f2af10f1059fa09e7",
+                        "checkId":  "NET-PORT-139",
+                        "title":  "High-Risk Port Open: 139",
+                        "severity":  "Critical"
+                    },
+                    {
+                        "fingerprint":  "0999cd664b40c86f185a7f285313adabf13b8108405fa18a934218ee42ba1d97",
+                        "checkId":  "SRV-001",
+                        "title":  "Auto-Start Services Path Review",
+                        "severity":  "Pass"
+                    },
+                    {
+                        "fingerprint":  "2afcd1b61331515f7b6a0cffe540f9ca9b7c1d4da8b9bb2f6bf45415da1a3476",
+                        "checkId":  "HUNT-STARTUP-001",
+                        "title":  "Startup File Hashing",
+                        "severity":  "Pass"
+                    },
+                    {
+                        "fingerprint":  "577f3ff4f393e6062b0c9ecc44431e8afdbdf1ff6465830864e98e4e3b268381",
+                        "checkId":  "HUNT-TASK-001",
+                        "title":  "Suspicious Scheduled Tasks Found",
+                        "severity":  "Critical"
+                    },
+                    {
+                        "fingerprint":  "d3750ece6a65eb0eb44f0d9dafe1d2ab39f357b7e1c13548bc8e8d40185df8d8",
+                        "checkId":  "HUNT-RUN-001",
+                        "title":  "Suspicious Run / RunOnce Entries",
+                        "severity":  "Warning"
+                    },
+                    {
+                        "fingerprint":  "99369af3dececff0a9df0293d4a139e2f82f22b4653c12a2f223cbe266fd51d4",
+                        "checkId":  "HUNT-WMI-001",
+                        "title":  "WMI Event Subscription Consumers",
+                        "severity":  "Pass"
+                    },
+                    {
+                        "fingerprint":  "218f65d365fe63b77c900b678a159442cffb15d01f818f03f9ffe54e8ecded2b",
+                        "checkId":  "HUNT-CONN-001",
+                        "title":  "Active Network Connections Snapshot",
+                        "severity":  "Info"
+                    }
+                ]
+}

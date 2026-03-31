@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WinGuard-PS Security Report</title>
+<style>
+body { font-family: Segoe UI, Arial, sans-serif; margin: 24px; background: #0f172a; color: #e2e8f0; }
+.card { background: #111827; border: 1px solid #1f2937; border-radius: 8px; padding: 16px; margin-bottom: 16px; }
+.metrics { display: flex; gap: 12px; flex-wrap: wrap; }
+.metric { background: #1e293b; padding: 10px 14px; border-radius: 6px; }
+.controls { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; margin-bottom: 12px; }
+input[type="search"], select { background: #1e293b; color: #e2e8f0; border: 1px solid #334155; border-radius: 6px; padding: 8px 10px; min-width: 200px; }
+table { width: 100%; border-collapse: collapse; }
+th, td { border: 1px solid #334155; padding: 8px; text-align: left; vertical-align: top; }
+th { background: #1e293b; }
+tr.critical { background: rgba(239, 68, 68, 0.2); }
+tr.warning { background: rgba(245, 158, 11, 0.2); }
+tr.pass { background: rgba(34, 197, 94, 0.2); }
+tr.info { background: rgba(59, 130, 246, 0.2); }
+tr.hidden { display: none; }
+.small { color: #94a3b8; font-size: 12px; }
+</style>
+</head>
+<body>
+<h1>WinGuard-PS Security Audit Report</h1>
+<div class="card">
+  <div class="metrics">
+    <div class="metric"><strong>Security Score:</strong> 65%</div>
+    <div class="metric"><strong>Critical:</strong> 4</div>
+    <div class="metric"><strong>Warning:</strong> 1</div>
+    <div class="metric"><strong>Pass:</strong> 7</div>
+    <div class="metric"><strong>Info:</strong> 1</div>
+  </div>
+  <p class="small">Scan time: 2026-03-31 01:21:43 | Host: MUATH | User: moath | Mode: Deep</p>
+</div>
+
+<div class="card">
+  <h2>Top Fixes</h2>
+  <ul><li>High-Risk Port Open: 445: Restrict access with firewall rules or disable unnecessary service. Verify the owning process and binary signature.</li><li>High-Risk Port Open: 135: Restrict access with firewall rules or disable unnecessary service. Verify the owning process and binary signature.</li><li>High-Risk Port Open: 139: Restrict access with firewall rules or disable unnecessary service. Verify the owning process and binary signature.</li><li>High-Risk Port Open: 135: Restrict access with firewall rules or disable unnecessary service. Verify the owning process and binary signature.</li><li>Suspicious Scheduled Tasks Found: Disable unknown tasks and verify binary source/trust.</li></ul>
+</div>
+<div class="card">
+  <h2>Findings</h2>
+  <div class="controls">
+    <label class="small" for="searchBox">Search</label>
+    <input type="search" id="searchBox" placeholder="Filter by text..." />
+    <label class="small" for="severityFilter">Severity</label>
+    <select id="severityFilter">
+      <option value="all">All</option>
+      <option value="Critical">Critical</option>
+      <option value="Warning">Warning</option>
+      <option value="Pass">Pass</option>
+      <option value="Info">Info</option>
+    </select>
+    <label class="small" for="categoryFilter">Category</label>
+    <select id="categoryFilter"><option value='all'>All categories</option><option value='Audit'>Audit</option><option value='Hunter'>Hunter</option></select>
+  </div>
+  <table id="findingsTable">
+    <thead><tr><th>Severity</th><th>Category</th><th>Title</th><th>Description</th><th>Remediation</th></tr></thead>
+    <tbody>
+      <tr class='pass' data-severity='Pass' data-category="Audit" data-text="pass audit uac enabled user account control is enabled."><td>Pass</td><td>Audit</td><td>UAC Enabled</td><td>User Account Control is enabled.</td><td>No action required.</td></tr>
+<tr class='pass' data-severity='Pass' data-category="Audit" data-text="pass audit firewall profile: domain firewall profile is enabled."><td>Pass</td><td>Audit</td><td>Firewall Profile: Domain</td><td>Firewall profile is enabled.</td><td>No action required.</td></tr>
+<tr class='pass' data-severity='Pass' data-category="Audit" data-text="pass audit firewall profile: private firewall profile is enabled."><td>Pass</td><td>Audit</td><td>Firewall Profile: Private</td><td>Firewall profile is enabled.</td><td>No action required.</td></tr>
+<tr class='pass' data-severity='Pass' data-category="Audit" data-text="pass audit firewall profile: public firewall profile is enabled."><td>Pass</td><td>Audit</td><td>Firewall Profile: Public</td><td>Firewall profile is enabled.</td><td>No action required.</td></tr>
+<tr class='pass' data-severity='Pass' data-category="Audit" data-text="pass audit local administrators review administrators group contains 2 account(s)."><td>Pass</td><td>Audit</td><td>Local Administrators Review</td><td>Administrators group contains 2 account(s).</td><td>No action required.</td></tr>
+<tr class='warning' data-severity='Warning' data-category="Audit" data-text="warning audit high-risk port open: 445 port 445 is listening by process system (pid 4). executable: . signature: n/a. (matched policy allowlist; severity downgraded.)"><td>Warning</td><td>Audit</td><td>High-Risk Port Open: 445</td><td>Port 445 is listening by process System (PID 4). Executable: . Signature: N/A. (Matched policy allowlist; severity downgraded.)</td><td>Restrict access with firewall rules or disable unnecessary service. Verify the owning process and binary signature.</td></tr>
+<tr class='critical' data-severity='Critical' data-category="Audit" data-text="critical audit high-risk port open: 135 port 135 is listening by process svchost (pid 1500). executable: c:\windows\system32\svchost.exe. signature: valid."><td>Critical</td><td>Audit</td><td>High-Risk Port Open: 135</td><td>Port 135 is listening by process svchost (PID 1500). Executable: C:\WINDOWS\system32\svchost.exe. Signature: Valid.</td><td>Restrict access with firewall rules or disable unnecessary service. Verify the owning process and binary signature.</td></tr>
+<tr class='critical' data-severity='Critical' data-category="Audit" data-text="critical audit high-risk port open: 139 port 139 is listening by process system (pid 4). executable: . signature: n/a."><td>Critical</td><td>Audit</td><td>High-Risk Port Open: 139</td><td>Port 139 is listening by process System (PID 4). Executable: . Signature: N/A.</td><td>Restrict access with firewall rules or disable unnecessary service. Verify the owning process and binary signature.</td></tr>
+<tr class='critical' data-severity='Critical' data-category="Audit" data-text="critical audit high-risk port open: 135 port 135 is listening by process svchost (pid 1500). executable: c:\windows\system32\svchost.exe. signature: valid."><td>Critical</td><td>Audit</td><td>High-Risk Port Open: 135</td><td>Port 135 is listening by process svchost (PID 1500). Executable: C:\WINDOWS\system32\svchost.exe. Signature: Valid.</td><td>Restrict access with firewall rules or disable unnecessary service. Verify the owning process and binary signature.</td></tr>
+<tr class='pass' data-severity='Pass' data-category="Audit" data-text="pass audit auto-start services path review no suspicious auto-start service paths detected."><td>Pass</td><td>Audit</td><td>Auto-Start Services Path Review</td><td>No suspicious auto-start service paths detected.</td><td>No action required.</td></tr>
+<tr class='pass' data-severity='Pass' data-category="Hunter" data-text="pass hunter startup file hashing no executable files found in startup folders."><td>Pass</td><td>Hunter</td><td>Startup File Hashing</td><td>No executable files found in startup folders.</td><td>No action required.</td></tr>
+<tr class='critical' data-severity='Critical' data-category="Hunter" data-text="critical hunter suspicious scheduled tasks found 3 scheduled task action(s) execute from user-writable paths."><td>Critical</td><td>Hunter</td><td>Suspicious Scheduled Tasks Found</td><td>3 scheduled task action(s) execute from user-writable paths.</td><td>Disable unknown tasks and verify binary source/trust.</td></tr>
+<tr class='info' data-severity='Info' data-category="Hunter" data-text="info hunter active network connections snapshot captured a snapshot of active tcp connections (limited to 500 rows)."><td>Info</td><td>Hunter</td><td>Active Network Connections Snapshot</td><td>Captured a snapshot of active TCP connections (limited to 500 rows).</td><td>Review unknown remote endpoints and investigate corresponding process IDs.</td></tr>
+    </tbody>
+  </table>
+</div>
+<script>
+(function() {
+  var table = document.getElementById('findingsTable');
+  if (!table) return;
+  var rows = table.querySelectorAll('tbody tr');
+  var search = document.getElementById('searchBox');
+  var severity = document.getElementById('severityFilter');
+  var category = document.getElementById('categoryFilter');
+  function apply() {
+    var q = (search && search.value ? search.value.toLowerCase() : '');
+    var sev = severity ? severity.value : 'all';
+    var cat = category ? category.value : 'all';
+    rows.forEach(function(row) {
+      var ds = row.getAttribute('data-severity') || '';
+      var dc = row.getAttribute('data-category') || '';
+      var dt = row.getAttribute('data-text') || '';
+      var okSev = (sev === 'all' || ds === sev);
+      var okCat = (cat === 'all' || dc === cat);
+      var okText = (!q || dt.indexOf(q) !== -1);
+      if (okSev && okCat && okText) {
+        row.classList.remove('hidden');
+      } else {
+        row.classList.add('hidden');
+      }
+    });
+  }
+  if (search) search.addEventListener('input', apply);
+  if (severity) severity.addEventListener('change', apply);
+  if (category) category.addEventListener('change', apply);
+})();
+</script>
+</body>
+</html>

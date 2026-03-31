@@ -1,0 +1,5 @@
+﻿{"timestamp":"2026-03-31T01:54:04.4876477+03:00","level":"INFO","message":"Scan started.","context":{"Delta":true,"Mode":"Deep","Quiet":true}}
+{"timestamp":"2026-03-31T01:54:06.4826399+03:00","level":"INFO","message":"Audit phase complete.","context":{"findings":14}}
+{"timestamp":"2026-03-31T01:54:07.7547149+03:00","level":"INFO","message":"Hunter phase complete.","context":{"findings":5}}
+{"timestamp":"2026-03-31T01:54:07.7646330+03:00","level":"INFO","message":"Delta computed.","context":{"removed":0,"new":0}}
+{"timestamp":"2026-03-31T01:54:07.7893326+03:00","level":"INFO","message":"Reports exported.","context":{"csv":"C:\\Users\\moath\\OneDrive\\Desktop\\Smart System Auditor (SSA)\\WinGuard-PS\\Reports\\Audit_20260331_015404.csv","html":"C:\\Users\\moath\\OneDrive\\Desktop\\Smart System Auditor (SSA)\\WinGuard-PS\\Reports\\Audit_20260331_015404.html","summary":"C:\\Users\\moath\\OneDrive\\Desktop\\Smart System Auditor (SSA)\\WinGuard-PS\\Reports\\Audit_20260331_015404.summary.txt","json":"C:\\Users\\moath\\OneDrive\\Desktop\\Smart System Auditor (SSA)\\WinGuard-PS\\Reports\\Audit_20260331_015404.json"}}

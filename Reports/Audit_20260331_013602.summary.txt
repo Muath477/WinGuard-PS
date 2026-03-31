@@ -1,0 +1,12 @@
+﻿WinGuard-PS - Security summary
+Host: MUATH | User: moath | Time: 2026-03-31 01:36:05 | Mode: Deep
+Security score: 78%
+Counts - Critical: 2 | Warning: 1 | Pass: 7 | Info: 2
+
+Top priorities (up to 3):
+1) [Critical] High-Risk Port Open: 139
+   Action: Restrict access with firewall rules or disable unnecessary service. Verify the owning process and binary signature.
+2) [Critical] Suspicious Scheduled Tasks Found
+   Action: Disable unknown tasks and verify binary source/trust. Open Task Scheduler and review the task paths listed above.
+3) [Warning] High-Risk Port Open: 445
+   Action: Restrict access with firewall rules or disable unnecessary service. Verify the owning process and binary signature.
